@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 400
-@export var acceleration: float = 2000.0
+@export var speed = 250
+@export var acceleration: float = 200
 
 enum {IDLE, WALK}
 var state = IDLE
