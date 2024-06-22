@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dekikedrbwkoi"]
+[gd_scene load_steps=4 format=3 uid="uid://dekikedrbwkoi"]
 
 [ext_resource type="TileSet" uid="uid://bimax6bsvttiv" path="res://tileset.tres" id="1_5ae8x"]
-[ext_resource type="Script" path="res://VisibilityManager.gd" id="1_icud2"]
 [ext_resource type="PackedScene" uid="uid://bysw5kkujs34u" path="res://Player.tscn" id="1_r4hw4"]
 [ext_resource type="PackedScene" uid="uid://br6ks2rhkpxu2" path="res://building.tscn" id="5_rqpuh"]
 
@@ -9,7 +8,6 @@
 y_sort_enabled = true
 
 [node name="Floor Manager" type="Node2D" parent="."]
-script = ExtResource("1_icud2")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_5ae8x")

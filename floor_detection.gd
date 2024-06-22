@@ -1,25 +1,33 @@
 extends Area2D
 
-var player_on_floor = false;
-var objects_to_show = []
+var player_on_floor = false
+
+var exterior_node = null
 
 func _ready():
-	objects_to_show = get_parent().find_node("ObjectsToShow", true, false).get_children()
+	# Find the 'Exterior' node once during initialization
+	exterior_node = get_parent().find_node("Exterior")
+	if exterior_node == null:
+		print("Exterior node not found")
 
-func _on_floor_area_entered(area):
-	if area.name == "Player":
-		player_on_floor = true
-		_show_objects()
-		
-func _on_floor_area_exited(area):
-	if area.name == "Player":
-		player_on_floor = false;
-		_hide_objects()
-		
 func _show_objects():
-	for obj in objects_to_show:
-		obj.visible = true
+	for child in self.get_children():
+		child.visible = true
+	if exterior_node:
+		exterior_node.visible = false
 
 func _hide_objects():
-	for obj in objects_to_show:
-		obj.visible = false
+	for child in self.get_children():
+		child.visible = false
+	if exterior_node:
+		exterior_node.visible = true
+
+func _on_body_entered(body):
+	if body.name == "Player":
+		player_on_floor = true
+		_show_objects()
+
+func _on_body_exited(body):
+	if body.name == "Player":
+		player_on_floor = false
+		_hide_objects()

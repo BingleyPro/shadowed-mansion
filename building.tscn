@@ -22,7 +22,7 @@ size = Vector2(432, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vlev"]
 size = Vector2(448, 184)
 
-[node name="Building" type="StaticBody2D"]
+[node name="Building" type="Node2D"]
 position = Vector2(0, 168)
 
 [node name="Ground Floor" type="Area2D" parent="."]
@@ -41,7 +41,6 @@ layer_0/name = "Ground"
 layer_0/tile_data = PackedInt32Array(-65533, 720897, 27, -131069, 720897, 26, -196605, 720897, 26, -262141, 720897, 26, -327677, 720897, 26, -393213, 720897, 24, -65534, 589825, 27, -131070, 589825, 26, -196606, 589825, 26, -262142, 589825, 26, -327678, 589825, 26, -393214, 655361, 24, -65535, 589825, 27, -131071, 589825, 26, -196607, 589825, 26, -262143, 589825, 26, -327679, 589825, 26, -393215, 655361, 24, -65536, 589825, 27, -131072, 589825, 26, -196608, 589825, 26, -262144, 589825, 26, -327680, 589825, 26, -393216, 655361, 24, -1, 589825, 27, -65537, 589825, 26, -131073, 589825, 26, -196609, 589825, 26, -262145, 589825, 26, -327681, 655361, 24, -2, 589825, 27, -65538, 589825, 26, -131074, 589825, 26, -196610, 589825, 26, -262146, 589825, 26, -327682, 655361, 24, -3, 589825, 27, -65539, 589825, 26, -131075, 589825, 26, -196611, 589825, 26, -262147, 589825, 26, -327683, 655361, 24, -4, 589825, 27, -65540, 589825, 26, -131076, 589825, 26, -196612, 589825, 26, -262148, 589825, 26, -327684, 655361, 24, -5, 524289, 27, -65541, 524289, 25, -131077, 524289, 25, -196613, 524289, 25, -262149, 524289, 25, -327685, 524289, 24)
 
 [node name="Exterior" type="Node2D" parent="."]
-modulate = Color(1, 1, 1, 0.498039)
 
 [node name="Sprite2D" type="Sprite2D" parent="Exterior"]
 position = Vector2(-24, 120)
@@ -67,5 +66,7 @@ position = Vector2(-24, -76)
 shape = SubResource("RectangleShape2D_1vlev")
 debug_color = Color(0.982751, 0, 0.359346, 0.42)
 
+[connection signal="body_entered" from="Ground Floor" to="Ground Floor" method="_on_body_entered"]
+[connection signal="body_exited" from="Ground Floor" to="Ground Floor" method="_on_body_exited"]
 [connection signal="body_entered" from="FadeArea" to="FadeArea" method="_on_body_entered"]
 [connection signal="body_exited" from="FadeArea" to="FadeArea" method="_on_body_exited"]
