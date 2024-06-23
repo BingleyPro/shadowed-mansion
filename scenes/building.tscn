@@ -17,10 +17,10 @@ size = Vector2(208, 16)
 size = Vector2(64, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ee82a"]
-size = Vector2(72.5873, 261.027)
+size = Vector2(72.5873, 228.399)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhq1t"]
-size = Vector2(168, 47.3783)
+size = Vector2(168, 63.1712)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bib0c"]
 atlas = ExtResource("1_d06u6")
@@ -34,14 +34,16 @@ region = Rect2(0, 1920, 432, 192)
 size = Vector2(432, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vlev"]
-size = Vector2(448, 248)
+size = Vector2(448, 268)
 
 [node name="Building" type="StaticBody2D"]
-position = Vector2(0, 168)
+y_sort_enabled = true
+position = Vector2(2.08165e-12, 138)
 script = ExtResource("1_lit2u")
 
 [node name="Interior" type="Node2D" parent="."]
-position = Vector2(2.08165e-12, 2.08165e-12)
+y_sort_enabled = true
+position = Vector2(2.08165e-12, 30)
 
 [node name="Ground Floor" type="StaticBody2D" parent="Interior"]
 z_as_relative = false
@@ -53,14 +55,15 @@ y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="Interior/Ground Floor/ObjectsToShow"]
 y_sort_enabled = true
+position = Vector2(-4.16329e-12, 0)
 tile_set = ExtResource("3_mskag")
 format = 2
 layer_0/name = "Floor"
 layer_0/z_index = -1
-layer_0/tile_data = PackedInt32Array(-196612, 2293764, 34, -131076, 2293764, 34, -65540, 2293764, 34, -196611, 2293764, 34, -131075, 2293764, 34, -65539, 2293764, 34, -196610, 2293764, 34, -131074, 2293764, 34, -65538, 2293764, 34, -196609, 2293764, 34, -131073, 2293764, 34, -65537, 2293764, 34, -262144, 2293764, 34, -196608, 2293764, 34, -131072, 2293764, 34, -262143, 2293764, 34, -196607, 2293764, 34, -131071, 2293764, 34, -262142, 2293764, 34, -196606, 2293764, 34, -131070, 2293764, 34, -4, 2293764, 34, -3, 2293764, 34, -2, 2293764, 34, -1, 2293764, 34, -65536, 2293764, 34, -65535, 2293764, 34, -65534, 2293764, 34)
+layer_0/tile_data = PackedInt32Array(-196612, 2293764, 34, -131076, 2293764, 34, -65540, 2293764, 34, -196611, 2293764, 34, -131075, 2293764, 34, -65539, 2293764, 34, -196610, 2293764, 34, -131074, 2293764, 34, -65538, 2293764, 34, -196609, 2293764, 34, -131073, 2293764, 34, -65537, 2293764, 34, -262144, 2293764, 34, -196608, 2293764, 34, -131072, 2293764, 34, -262143, 2293764, 34, -196607, 2293764, 34, -131071, 2293764, 34, -262142, 2293764, 34, -196606, 2293764, 34, -131070, 2293764, 34, -4, 2293764, 34, -3, 2293764, 34, -2, 2293764, 34, -1, 2293764, 34, -65536, 2293764, 34, -65535, 2293764, 34, -65534, 2293764, 34, 65532, 3604484, 80, 65533, 3604484, 80, 65534, 3604484, 80, 65535, 3604484, 80, 2, 3604484, 80, 3, 3735556, 80, 65531, 3538948, 80)
 layer_1/name = "Walls"
 layer_1/y_sort_enabled = true
-layer_1/tile_data = PackedInt32Array(-327685, 3538948, 75, -262149, 3538948, 76, -196613, 3538948, 77, -131077, 3538948, 77, -65541, 3538948, 77, -5, 3538948, 77, -327684, 3604484, 77, -327683, 3604484, 77, -131075, 3604484, 77, -327682, 3604484, 77, -131074, 3670020, 77, -327681, 3604484, 77, -131073, 3604484, 77, -393216, 3604484, 77, -196608, 3604484, 77, -393215, 3604484, 77, -196607, 3670020, 77, -393214, 3604484, 77, -393213, 3735556, 75, -327677, 3735556, 76, -262141, 3735556, 77, -196605, 3735556, 77, -131069, 3735556, 77, -65533, 3735556, 77, 65531, 3538948, 80, -262148, 3604484, 78, 65532, 3604484, 80, -262147, 3604484, 78, -65539, 3604484, 78, 65533, 3604484, 80, -262146, 3604484, 78, -65538, 3670020, 78, 65534, 3604484, 80, -262145, 3604484, 78, -65537, 3604484, 78, 65535, 3604484, 80, -327680, 3604484, 78, -131072, 3604484, 78, -327679, 3604484, 78, -131071, 3670020, 78, -327678, 3604484, 78, 2, 3670020, 80, 3, 3735556, 80)
+layer_1/tile_data = PackedInt32Array(-327685, 3538948, 75, -262149, 3538948, 76, -196613, 3538948, 77, -131077, 3538948, 77, -65541, 3538948, 77, -5, 3538948, 77, -327684, 3604484, 77, -327683, 3604484, 77, -131075, 3604484, 77, -327682, 3604484, 77, -131074, 3670020, 77, -327681, 3604484, 77, -131073, 3604484, 77, -393216, 3604484, 77, -196608, 3604484, 77, -393215, 3604484, 77, -196607, 3670020, 77, -393214, 3604484, 77, -393213, 3735556, 75, -327677, 3735556, 76, -262141, 3735556, 77, -196605, 3735556, 77, -131069, 3735556, 77, -65533, 3735556, 77, -262148, 3604484, 78, -262147, 3604484, 78, -65539, 3604484, 78, -262146, 3604484, 78, -65538, 3670020, 78, -262145, 3604484, 78, -65537, 3604484, 78, -327680, 3604484, 78, -131072, 3604484, 78, -327679, 3604484, 78, -131071, 3670020, 78, -327678, 3604484, 78)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interior/Ground Floor"]
 position = Vector2(152, -96)
@@ -92,7 +95,7 @@ debug_color = Color(0.223529, 0.839216, 0.368627, 0.482353)
 [node name="EntranceArea" type="Area2D" parent="Interior"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interior/EntranceArea"]
-position = Vector2(48, 24)
+position = Vector2(48, 20)
 scale = Vector2(1.32255, 0.245185)
 shape = SubResource("RectangleShape2D_ee82a")
 
@@ -100,10 +103,11 @@ shape = SubResource("RectangleShape2D_ee82a")
 scale = Vector2(1, 1.01312)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interior/ExitArea"]
-position = Vector2(44, 47.3783)
+position = Vector2(44, 55.2747)
 shape = SubResource("RectangleShape2D_hhq1t")
 
 [node name="Exterior" type="Node2D" parent="."]
+position = Vector2(2.08165e-12, 30)
 
 [node name="Sprite2D" type="Sprite2D" parent="Exterior"]
 position = Vector2(-24, 120)
@@ -116,13 +120,14 @@ texture = SubResource("AtlasTexture_j3oon")
 offset = Vector2(0, -168)
 
 [node name="FadeArea" type="Area2D" parent="."]
+position = Vector2(2.08165e-12, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FadeArea"]
 position = Vector2(-24, -264)
 shape = SubResource("RectangleShape2D_ll36t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-24, -108)
+position = Vector2(-24, -66)
 shape = SubResource("RectangleShape2D_1vlev")
 debug_color = Color(0.982751, 0, 0.359346, 0.42)
 
