@@ -43,6 +43,19 @@ move_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="-4 Floor"
+2d_physics/layer_2="-3 Floor"
+2d_physics/layer_3="-2 Floor"
+2d_physics/layer_4="-1 Floor"
+2d_physics/layer_5="Ground Floor"
+2d_physics/layer_6="1 Floor"
+2d_physics/layer_7="2 Floor"
+2d_physics/layer_8="3 Floor"
+2d_physics/layer_9="4 Floor"
+2d_physics/layer_10="5 Floor"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
